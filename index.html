@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 반 MBTI 테스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <h1>🔍 중3 공감 MBTI 테스트</h1>
+            <p>학교 생활로 알아보는 나의 진짜 성격은?</p>
+            <button class="start-btn" onclick="startTest()">테스트 시작하기</button>
+        </div>
+
+        <div id="question-screen" class="screen">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <h2 id="question-title">질문이 들어갈 자리입니다.</h2>
+            <div class="options">
+                <button id="btn-A" onclick="nextQuestion(0)">A 답변</button>
+                <button id="btn-B" onclick="nextQuestion(1)">B 답변</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h3>너의 MBTI 유형은...</h3>
+            <h1 id="mbti-result">ESTJ</h1>
+            <p id="mbti-desc">결과에 대한 설명이 나옵니다.</p>
+            <button class="restart-btn" onclick="location.reload()">다시 테스트하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
